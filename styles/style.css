@@ -21,6 +21,7 @@
 body {
     background-color: var(--primary-bg);
     max-width: 100%;
+    font-family: Montserrat, serif;
 }
 
 /* Utils */
@@ -81,4 +82,60 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.popular-title {
+    color: var(--text-yellow);
+    text-align: center;
+}
+
+.card-container {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;   
+}
+
+.moviePoster {
+    width: 14rem;
+    display: block;
+    overflow: hidden;
+    position: relative; 
+
+}
+
+
+.moviePoster__Posters {
+    width: auto ;
+    height: 20rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;   
+}
+
+.moviePoster__Posters:hover{
+    height: 22rem;
+    width: auto;
+    z-index: 10;
+}
+
+.movieLink{
+    color: var(--text-yellow);
+    text-decoration: none;  
+}
+
+.search-title {
+    color: var(--text-yellow);
+    text-align: center;
+}
+
+.favorites {
+    position: absolute;
+    top: 7%;
+    right: 10%;
+    z-index: 20;
 }
