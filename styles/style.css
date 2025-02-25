@@ -109,6 +109,9 @@ body {
 
 }
 
+.moviePoster__top {
+    position: relative;
+}
 
 .moviePoster__Posters {
     width: auto ;
@@ -123,6 +126,18 @@ body {
     z-index: 10;
 }
 
+.moviePoster__favoritesBtn {
+    margin: 0.5rem;
+    background-color:transparent;
+    border: none;
+    /* cursor: pointer; */
+    position: absolute;
+}
+
+.fa-2xl {
+    color: var(--text-yellow);
+}
+
 .movieLink{
     color: var(--text-yellow);
     text-decoration: none;  
@@ -135,8 +150,8 @@ body {
 
 .favorites {
     position: absolute;
-    top: 7%;
-    right: 10%;
+    top: 1%;
+    right: 2%;
     z-index: 20;
 }
 
