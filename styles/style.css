@@ -21,6 +21,7 @@
 body {
     background-color: var(--primary-bg);
     max-width: 100%;
+    font-family: Montserrat, serif;
 }
 
 /* Utils */
@@ -81,4 +82,113 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.popular-title {
+    color: var(--text-yellow);
+    text-align: center;
+}
+
+.card-container {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;   
+}
+
+.moviePoster {
+    width: 14rem;
+    display: block;
+    overflow: hidden;
+    position: relative; 
+
+}
+
+.moviePoster__top {
+    position: relative;
+}
+
+.moviePoster__Posters {
+    width: auto ;
+    height: 20rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;   
+}
+
+/* .moviePoster__Posters:hover{
+    height: 22rem;
+    width: auto;
+    z-index: 10;
+} */
+
+.moviePoster__favoritesBtn {
+    margin: 0.5rem;
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.fa-2xl {
+    color: var(--text-yellow);
+}
+
+.movieLink{
+    color: var(--text-yellow);
+    text-decoration: none;  
+}
+
+.search-title {
+    color: var(--text-yellow);
+    text-align: center;
+}
+
+.favorites {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    z-index: 20;
+}
+
+.movieCard {
+    max-width: 100%;
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+    border: 1px solid var(--text-yellow);
+    padding: 2rem;
+    color: var(--text-yellow);
+}
+
+.movieCard__info--title {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.movieCard__info--artists {
+    display: flex;
+    margin-bottom: 1.5rem;
+    margin-top:1.5rem;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .movieCard {
+        flex-wrap: wrap;
+    }
+
+    .movieCard__Poster {
+        max-width: 100%;
+    }
+
+    .movieCard__info--artists {
+        max-width: 20%;
+        flex-wrap: wrap;
+        line-height: 1.8;
+    }
 }
