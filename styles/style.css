@@ -106,9 +106,11 @@ body {
     display: block;
     overflow: hidden;
     position: relative; 
-
 }
 
+.moviePoster__top {
+    position: relative;
+}
 
 .moviePoster__Posters {
     width: auto ;
@@ -117,10 +119,22 @@ body {
     cursor: pointer;   
 }
 
-.moviePoster__Posters:hover{
+/* .moviePoster__Posters:hover{
     height: 22rem;
     width: auto;
     z-index: 10;
+} */
+
+.moviePoster__favoritesBtn {
+    margin: 0.5rem;
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.fa-2xl {
+    color: var(--text-yellow);
 }
 
 .movieLink{
@@ -148,6 +162,7 @@ body {
     border: 1px solid var(--text-yellow);
     padding: 2rem;
     color: var(--text-yellow);
+    position: relative;
 }
 
 .movieCard__info--title {
