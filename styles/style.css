@@ -120,17 +120,17 @@ body {
     cursor: pointer;   
 }
 
-.moviePoster__Posters:hover{
+/* .moviePoster__Posters:hover{
     height: 22rem;
     width: auto;
     z-index: 10;
-}
+} */
 
 .moviePoster__favoritesBtn {
     margin: 0.5rem;
     background-color:transparent;
     border: none;
-    /* cursor: pointer; */
+    cursor: pointer;
     position: absolute;
 }
 
