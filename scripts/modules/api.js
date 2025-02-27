@@ -4,7 +4,7 @@ export async function fetchTopMovies() {
 		let topMovieList = await response.json();
 		return topMovieList;
 	} catch (error) {
-		console.error('Failed to fetch topMovies:', error.message);
+		  console.error('Failed to fetch topMovies:', error.message);
 	}
 }
 

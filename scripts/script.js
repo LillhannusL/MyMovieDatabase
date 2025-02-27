@@ -13,6 +13,7 @@ import { renderTrailers } from './modules/caroussel.js';
 import { renderMoviePosters } from "./utils/domUtils.js"
 import { renderMovieCard } from './components/movieCard.js';
 
+
 if (
 	window.location.pathname === '/' ||
 	window.location.pathname === '/index.html'
@@ -61,7 +62,6 @@ async function searchPageSetup() {
 			console.error('Något gick fel vid hämtningen av filmer');
 		}
 	}
-
 	setupSearchForm();
 	goToFavorites()
 	listenForFavorites();
@@ -86,7 +86,6 @@ function favoritesPageSetup() {
 	listenForFavorites();
 	setupSearchForm();
 }
-
 
 function goToFavorites() {
 	const favoritesRef = document.querySelector('#favBtn');

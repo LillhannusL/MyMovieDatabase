@@ -125,6 +125,7 @@ body {
     filter: grayscale(100%);
 }
 
+
 .moviePoster__favoritesBtn {
     margin: 0.5rem;
     background-color:transparent;
@@ -149,8 +150,8 @@ body {
 
 .favorites {
     position: absolute;
-    top: 7%;
-    right: 10%;
+    top: 1%;
+    right: 2%;
     z-index: 20;
 }
 .favorites-title {

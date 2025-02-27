@@ -1,4 +1,3 @@
-
 export function renderMoviePosters(movieList) {
     const posterRef = document.querySelector('#cardContainer')
 	posterRef.innerHTML = ''

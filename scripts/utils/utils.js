@@ -5,7 +5,6 @@ import {
 
 let isEventListenerSet = false;
 
-
 export function listenForFavorites() {
     if (isEventListenerSet) return;
 
@@ -75,10 +74,3 @@ export function getRandomTrailers(trailers) {
     }
     return trailers.slice(0, 5);
 };
-
-export function getFavoriteButton(movie) {
-    const favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
-    const isFavorite = favoriteMovies.some(favMovie => favMovie.imdbID === movie.imdbID);
-    const starClass = isFavorite ? 'fa-solid' : 'fa-regular';
-    return `<button class="moviePoster__favoritesBtn favorites" aria-label="add to favorites"><i class="${starClass} fa-2xl fa-star"></i></button>`;
-}

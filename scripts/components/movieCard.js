@@ -6,11 +6,11 @@ export function createMovieCard(movie) {
     const isFavorite = favoriteMovies.some(favMovie => favMovie.imdbID === movie.imdbID);
     const starClass = isFavorite ? 'fa-solid' : 'fa-regular';
 
-	let cardRef = document.createElement('article');
-	cardRef.classList.add('movieCard');
+    let cardRef = document.createElement('article');
+    cardRef.classList.add('movieCard');
     cardRef.dataset.imdbid = movie.imdbID; 
-
-	const cardTemp = `
+  
+  	const cardTemp = `
             <div class ="movieCard__top">
                 <img
                 src="${movie.Poster}"
