@@ -1,12 +1,16 @@
 import { fetchOMDBMovieDetails } from "../modules/api.js";
 
+
 export function createMovieCard(movie) {
     const favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
     const isFavorite = favoriteMovies.some(favMovie => favMovie.imdbID === movie.imdbID);
     const starClass = isFavorite ? 'fa-solid' : 'fa-regular';
-	let cardRef = document.createElement('article');
-	cardRef.classList.add('movieCard');
-	const cardTemp = `
+
+    let cardRef = document.createElement('article');
+    cardRef.classList.add('movieCard');
+    cardRef.dataset.imdbid = movie.imdbID; 
+  
+  	const cardTemp = `
             <div class ="movieCard__top">
                 <img
                 src="${movie.Poster}"
@@ -16,6 +20,7 @@ export function createMovieCard(movie) {
             </div>
             <div class="moviePoster_bottom">
             <h2 class="movieCard__info--title">${movie.Title}</h2>
+            <button class="moviePoster__favoritesBtn favorites movieCard__favoritesBtn" aria-label="add to favorites"><i class="${starClass} fa-2xl fa-star"></i></button>
             <div class="movieCard__info--artists">
                 <p class="movieCard__info"><b>Director:</b> <br>${movie.Director}</p>
                 <p class="movieCard__info"><b>Writer:</b> <br>${movie.Writer}</p>

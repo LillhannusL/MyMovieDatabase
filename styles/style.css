@@ -102,11 +102,11 @@ body {
 }
 
 .moviePoster {
-    width: 14rem;
+    width: 13rem;
+    height: auto;
     display: block;
     overflow: hidden;
     position: relative; 
-
 }
 
 .moviePoster__top {
@@ -116,15 +116,15 @@ body {
 .moviePoster__Posters {
     width: auto ;
     height: 20rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;   
 }
 
-/* .moviePoster__Posters:hover{
-    height: 22rem;
-    width: auto;
-    z-index: 10;
-} */
+.moviePoster__Posters:hover{
+    transform: scale(1.1);
+    filter: grayscale(100%);
+}
+
 
 .moviePoster__favoritesBtn {
     margin: 0.5rem;
@@ -154,6 +154,11 @@ body {
     right: 2%;
     z-index: 20;
 }
+.favorites-title {
+    color: var(--text-yellow);
+    text-align: center;
+    margin: 1rem;
+}
 
 .movieCard {
     max-width: 100%;
@@ -163,6 +168,7 @@ body {
     border: 1px solid var(--text-yellow);
     padding: 2rem;
     color: var(--text-yellow);
+    position: relative;
 }
 
 .movieCard__info--title {
