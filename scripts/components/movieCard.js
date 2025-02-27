@@ -5,8 +5,11 @@ export function createMovieCard(movie) {
     const favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
     const isFavorite = favoriteMovies.some(favMovie => favMovie.imdbID === movie.imdbID);
     const starClass = isFavorite ? 'fa-solid' : 'fa-regular';
+
 	let cardRef = document.createElement('article');
 	cardRef.classList.add('movieCard');
+    cardRef.dataset.imdbid = movie.imdbID; 
+
 	const cardTemp = `
             <div class ="movieCard__top">
                 <img

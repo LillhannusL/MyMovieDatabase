@@ -1,13 +1,10 @@
 
 export function renderMoviePosters(movieList) {
-	console.log('Innehåll av movieList:', movieList);
-
     const posterRef = document.querySelector('#cardContainer')
 	posterRef.innerHTML = ''
 
     for(let movie of movieList) {
         let moviePoster = createMoviePosters(movie)
-        // console.log('Poster URL:', movie.Poster);
         posterRef.appendChild(moviePoster)
     }
 }
@@ -39,18 +36,3 @@ export function createMoviePosters(movie) {
 
 	return posterRef;
 }
-
-// async function checkImageExists(url) {
-//     try {
-//         const response = await fetch(url, { method: "HEAD" });
-//         console.log('image', response);
-//         if(!response.ok) {
-//             throw new Error('Image does not exist');
-//         }
-//         return response.ok;
-//     } catch (error) {
-//         console.log(error.message);
-//         return false;
-//     }
-// }
-
