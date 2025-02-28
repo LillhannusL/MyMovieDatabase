@@ -27,8 +27,6 @@ if (
 	searchPageSetup();
 }
 
-// Get Random Trailers on start page
-
 async function pageSetup() {
 	const topMovieList = await fetchTopMovies();
 	let trailers = getRandomTrailers(topMovieList);

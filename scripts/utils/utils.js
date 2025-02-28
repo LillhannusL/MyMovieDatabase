@@ -74,3 +74,17 @@ export function getRandomTrailers(trailers) {
     }
     return trailers.slice(0, 5);
 };
+
+export async function checkImageExists(url) {
+    try {
+        const response = await fetch(url, { method: "HEAD" });
+        console.log('image', response);
+        if(!response.ok) {
+            throw new Error('Image does not exist');
+        }
+        return response.ok;
+    } catch (error) {
+        console.log(error.message);
+        return false;
+    }
+}
